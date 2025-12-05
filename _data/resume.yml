@@ -187,7 +187,7 @@ others: #其他列表显示
       content: #选择需要的格式
           -
           - title: 模型评测（OpenCompass）｜ 模型训练和优化 ｜ 模型应用
-            # text: 模型评测（OpenCompass）｜ 模型训练和优化 ｜ 模型应用
+            text:
 
       #   items: #单行列表
       #   - 睡觉
