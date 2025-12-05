@@ -48,8 +48,7 @@ main: #简历主要内容，
                 2. 了解TCP/IP、HTTP等网络协议，熟悉Linux常用命令；<br/>
                 3. 熟练掌握常用的数据结构和算法，有一定的工程素养，技术栈丰富；<br/>
                 4. 熟练掌握Flask、FastAPI等web框架和sync/await, asyncio, HTTPX等异步编程；<br/>
-                5. 熟悉领域模型构建、评估、应用等技能；<br/>
-                6. 有大模型场景落地经验，熟悉数据加工、Prompt设计、模型微调、模型评测等技术。
+                5. 有大模型场景落地经验，熟悉数据加工、Prompt设计、模型微调、模型评测等技术。
             open: open
           - title: 综合
             detail:
@@ -67,7 +66,7 @@ main: #简历主要内容，
             # - 数据挖掘
             # - 模型落地
             # summary: 职务或者工作总结(自动折叠)
-            detail: 负责领域模型构建（含数据准备、训练、评估、部署等）；<br/> 负责文档Agent信息提取技能构建和工程花落地；<br/> 负责评估算法微服务构建。
+            detail: 负责领域模型构建（含数据准备、训练、评估、部署等）；<br/> 负责文档Agent信息提取技能构建和工程化落地；<br/> 负责评估算法微服务构建。
 
           - title: 亿达信息技术有限公司
             sub: 数据挖掘&平台开发
@@ -101,15 +100,15 @@ main: #简历主要内容，
             duration: 2024年5月 - 至今
             tags:
                 - MLOps
-                - 数据清洗（Fasttext）
-                - 模型训练（SFT、LoRA、DPO）
+                - 数据清洗pipeline
+                - 模型训练
                 - 模型部署（vLLM）
-                - 模型评估（OpenCompass）
+                - 模型评估
             summary: 项目描述：<br/> 1. 基于公司内引入的基础模型（Qwen系列），构建领域类模型。
             detail:
-                主要职责：<br/> 1. 数据清洗：定时任务拉取业务方数据，利用各种算子进行清洗，然后通过fasttext知识密度打分、模型质检过滤，最后借助Minhash进行全局去重；<br/>
-                2. 模型训练：基于公司内部引入的基础模型（Qwen2.5-32B、Qwen2.5-7B、Qwen3-32B），进行微调，构建懂华为的企业公共大模型和特性模型；<br/>
-                3. 模型部署：借助 vLLM 部署推理服务，之后借助低代码平台封装各种技能（prompt技能、flowchain技能、llm技能），提供给用户使用；<br/>
+                主要职责：<br/> 1. 数据清洗pipeline：定时拉取业务数据，清洗-Fasttext知识密度打分-模型质检过滤-Minhash全局去重；<br/>
+                2. 模型训练：基于公司内部引入的基础模型，进行微调（SFT、LoRA、DPO），构建懂华为的企业公共大模型和特性模型；<br/>
+                3. 模型部署：借助 vLLM 部署推理服务，之后借助低代码平台封装各种技能，提供给用户使用；<br/>
                 4. 模型评估：接收自定义数据集，计算Rouge、Bleu指标和自定义指标；另外也支持预置通用数据集，计算通用指标。
             open: open
 
@@ -117,12 +116,12 @@ main: #简历主要内容，
             sub: AI应用工程师
             duration: 2025年2月 - 至今
             tags:
-                - 文档Agent
+                - Agent
                 - RAG
                 - VL
                 - Embedding
                 - Faiss检索
-                - 多模态模型
+                - MLLM
                 - 异步API
             summary: 项目描述：<br/> 1. 商业化标签抽取：使用大模型相关技术，从众多产品的二方数据中，挖掘商业化标签（商品类别、SPU）；<br/> 2. 智能化数据分析引擎：用AI开启对话式数据分析，从而提高数据资产的使用效率，降低数据分析的门槛。
             detail:
@@ -187,10 +186,9 @@ others: #其他列表显示
       name: 其他
       content: #选择需要的格式
           -
-          - title: 奖项
-            text: 腾讯微创新奖｜腾讯出行服务：抗疫公益互助
-          - title: 证书
-            text: PMP｜项目管理证书
+          - title: 研究方向
+            text: 模型评测（OpenCompass）｜ 模型训练和优化 ｜ 模型应用
+
       #   items: #单行列表
       #   - 睡觉
       #   - 吃饭
@@ -212,7 +210,7 @@ footer: #脚注多组
         - text: 简历脚注
         #   href: '/'
         - text: Made with &hearts; by Yafengbu
-          href: https://kyod-bu.github.io/cv/
+          href: https://yafengbu.github.io/cv/
 
 #页面额外js脚本，如xx统计
 scripts:
