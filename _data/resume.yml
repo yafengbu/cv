@@ -61,7 +61,7 @@ main: #简历主要内容，
       name: 工作经历
       content:
           - title: 上海科之锐人才咨询有限公司
-            sub: AI应用开发
+            sub: AI模型训练&AI应用开发
             duration: 2024年5月 - 至今
             tags:
             # - 数据挖掘
