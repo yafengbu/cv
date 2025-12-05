@@ -96,7 +96,7 @@ main: #简历主要内容，
     - type: Projects
       name: 项目经验
       content:
-          - title: 领域模型构建
+          - title: 构建领域模型
             sub: AI训练师&AI开发者
             duration: 2024年5月 - 至今
             tags:
