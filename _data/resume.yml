@@ -1,20 +1,20 @@
 # 数据格式可以为 yaml(文件以.yml结尾) 或者json(文件以.json结尾)
 # 如果YAML格式的数据请先检查格式是否有误，可选检查工具 http://www.yamllint.com
 
-title: 卜亚风-数据挖掘-深圳
+title: 卜亚风-AI应用开发-深圳
 lang: zh #语言设置 zh表示中文 en 表示英语
 name: 卜亚风
-jobtitle: 数据挖掘 #可空不显示
+jobtitle: AI应用开发 #可空不显示
 photo: assets/img/me.jpg #照片可空，不显示
 
 #联系方式
 contact: #联系方式连接等3~5行
-# - text: yafengbu@gmail.com #文本内容，另一个邮箱 751019439@qq.com
-- text: 751019439@qq.com
-  # href: mailto:yafengbu@gmail.com #链接，无链接则空
-  icon: icons/email.svg #图标 svg文件
-- text: +86 15029074256
-  icon: icons/phone.svg
+    # - text: yafengbu@gmail.com #文本内容，另一个邮箱 751019439@qq.com
+    - text: 751019439@qq.com
+      # href: mailto:yafengbu@gmail.com #链接，无链接则空
+      icon: icons/email.svg #图标 svg文件
+    - text: +86 15029074256
+      icon: icons/phone.svg
 # - text: https://github.com/yafengbu/
 #   icon: icons/github.svg
 #   href: https://github.com/yafengbu/
@@ -22,130 +22,181 @@ contact: #联系方式连接等3~5行
 
 #main下面是主体内容，类别条数不限
 main: #简历主要内容，
-- type: education #类别为ID
-  name: 教育背景 #显示名称，空则使用type
-  content: #内容基本格式 标题-副标题-日期-详细内容 (都允许空)
-  - title: 西安邮电大学
-    sub: 智能科学与技术｜学士
-    duration: 2013年9月 - 2017年7月
-    detail: 主修课程：概率论与随机过程、计算机网络、算法设计与分析、机器学习、模式识别、自然语言理解等。
+    - type: education #类别为ID
+      name: 教育背景 #显示名称，空则使用type
+      content: #内容基本格式 标题-副标题-日期-详细内容 (都允许空)
+          - title: 西安邮电大学
+            sub: 智能科学与技术｜学士
+            duration: 2013年9月 - 2017年7月
+            detail: 主修课程：概率论与随机过程、计算机网络、算法设计与分析、机器学习、模式识别、自然语言理解等。
 
-- type: skill
-  name: 个人技能
-  content:
-  - title: 技术
-    # itmems: #itmems 可以小块的方式显示
-    tags:
-    - SQL
-    - Python
-    - 数据分析
-    - 可视化
-    - 大模型
-    # summary: Python开发、数据挖掘、大模型
-    detail: 1. 熟练掌握Python编程，可使用SQL/Pandas/Numpy/Matplotlib等数据处理工具；<br/>
-            2. 了解TCP/IP、HTTP等网络协议，熟悉Linux常用命令；<br/>
-            3. 熟练掌握常用的数据结构和算法，有一定的工程素养，技术栈丰富；<br/>
-            4. 有大模型场景落地经验，熟悉数据加工、Prompt设计、模型微调、模型评测等技术。
-    open: open
-  - title: 综合
-    detail: 1. 对新技术充满好奇，勇于探索，敢于尝试；有较强的分析和逻辑推理能力；<br/>
-            2. 工作认真负责、勇于担当、执行力强；能力综合，有项目管理和运营经验。
-    open: open
+    - type: skill
+      name: 个人技能
+      content:
+          - title: 技术
+            # itmems: #itmems 可以小块的方式显示
+            tags:
+                - SQL
+                - Python
+                - 数据分析
+                - 可视化
+                - 大模型
+                - 模型评估
+            # summary: Python开发、数据挖掘、大模型
+            detail:
+                1. 熟练掌握Python编程，可使用SQL/Pandas/Numpy/Matplotlib等数据处理工具；<br/>
+                2. 了解TCP/IP、HTTP等网络协议，熟悉Linux常用命令；<br/>
+                3. 熟练掌握常用的数据结构和算法，有一定的工程素养，技术栈丰富；<br/>
+                4. 熟练掌握Flask、FastAPI等web框架和sync/await, asyncio, HTTPX等异步编程；<br/>
+                5. 熟悉领域模型构建、评估、应用等技能；<br/>
+                6. 有大模型场景落地经验，熟悉数据加工、Prompt设计、模型微调、模型评测等技术。
+            open: open
+          - title: 综合
+            detail:
+                1. 对新技术充满好奇，勇于探索，敢于尝试；有较强的分析和逻辑推理能力；<br/>
+                2. 工作认真负责、勇于担当、执行力强；能力综合，有项目管理和运营经验。
+            open: open
 
-- type: experience
-  name: 工作经历
-  content:
-  - title: 亿达信息技术有限公司
-    sub: 数据挖掘&平台开发
-    duration: 2019年3月 - 至今
-    tags:
-    # - 数据挖掘
-    # - 模型落地
-    # summary: 职务或者工作总结(自动折叠)
-    detail: 负责大模型在数据分析领域的多个场景的研究和应用落地；<br/> 参与业务安全平台的建设和业务安全策略开发工作。
+    - type: experience
+      name: 工作经历
+      content:
+          - title: 上海科之锐人才咨询有限公司
+            sub: AI应用开发
+            duration: 2024年5月 - 至今
+            tags:
+            # - 数据挖掘
+            # - 模型落地
+            # summary: 职务或者工作总结(自动折叠)
+            detail: 负责领域模型构建（含数据准备、训练、评估、部署等）；<br/> 负责文档Agent信息提取技能构建和工程花落地；<br/> 负责评估算法微服务构建。
 
-  - title: 中软国际科技服务有限公司
-    sub: Python开发
-    duration: 2017年2月 - 2019年2月
-    tags:
-    # summary: Python开发
-    detail: 负责网管产品U2000对应的模拟器项目的开发和版本维护工作；<br/> 按照需求文档，完成模拟器管理平台的模块设计、开发工作。
-    open: open #可以设置open默认展开
-  # - title: Job Title
-  #   sub: Your 2nd, Inc.
-  #   duration: Apr 2013 - Mar 2016
-  #   tags:
-  #   - tagname
-  #   summary: Summary your job or work. (Collapse)
-  #   detail: Details can be collapsed in Chrome Safari, Firefox, Opera and so on. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          - title: 亿达信息技术有限公司
+            sub: 数据挖掘&平台开发
+            duration: 2019年3月 - 2024年3月
+            tags:
+            # - 数据挖掘
+            # - 模型落地
+            # summary: 职务或者工作总结(自动折叠)
+            detail: 负责大模型在数据分析领域的多个场景的研究和应用落地；<br/> 参与业务安全平台的建设和业务安全策略开发工作。
 
-- type: Projects
-  name: 项目经验
-  content:
-  - title: 大模型场景落地
-    sub: 数据挖掘
-    duration: 2023年3月 - 至今
-    tags:
-    - 数据加工
-    - Prompt设计
-    - 模型微调
-    - 模型评测
-    summary: 项目描述：<br/> 1. 商业化标签抽取：使用大模型相关技术，从众多产品的二方数据中，挖掘商业化标签（商品类别、SPU）；<br/> 2. 智能化数据分析引擎：用AI开启对话式数据分析，从而提高数据资产的使用效率，降低数据分析的门槛。
-    detail: 主要职责：<br/> 1. 数据构造：对业务方提供的数据，进行清洗加工，整理成模型需要的格式；<br/>
-            2. 模型选型：对司内机器学习平台提供的中文对话模型，进行评估，筛选出适用于自己业务场景的模型；<br/>
-            3. 模型微调：借助Prompt和LoRA微调技术，优化模型效果；<br/>
-            4. 优化迭代：借助Python接口调用对模型结果进行验证并迭代，直到准确率到90%以上。
-    open: open
+          - title: 中软国际科技服务有限公司
+            sub: Python开发
+            duration: 2017年2月 - 2019年2月
+            tags:
+            # summary: Python开发
+            detail: 负责网管产品U2000对应的模拟器项目的开发和版本维护工作；<br/> 按照需求文档，完成模拟器管理平台的模块设计、开发工作。
+            open: open #可以设置open默认展开
+      # - title: Job Title
+      #   sub: Your 2nd, Inc.
+      #   duration: Apr 2013 - Mar 2016
+      #   tags:
+      #   - tagname
+      #   summary: Summary your job or work. (Collapse)
+      #   detail: Details can be collapsed in Chrome Safari, Firefox, Opera and so on. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  - title: 星迹-业务安全风控平台
-    sub: 运营开发&数据挖掘
-    duration: 2019年3月 - 2023年2月
-    tags:
-    - Python
-    - SQL
-    - 数据可视化
-    - 数据分析
-    - 安全策略
-    summary: 项目描述：<br/> 一站式安全运营平台，为业务各种场景（账户安全、营销活动、内容生态安全、反赌反诈等）提供安全解决方案。年度减损9000万以上。<br/> 1. 提供业务接入，可视化策略编排，策略版本控制，实现全链路的监控和运营数据管理。<br/> 2. 在平台的使用过程中，积累了大量风控专用的特征数据，结合“终端特征、图模型、行为时序、多模态”等技术，形成了完备的风险防控闭环。
-    detail: 主要职责：<br/> 1. 后台开发：负责接入层的开发，即接收业务在关键路径上的请求，对于有风险的操作，执行策略判定，并将结果返回给策略引擎，用于策略的执行和判定，以及后续的打击阻断操作；<br/>
-            2. 策略对抗：对业务配置的策略按逻辑进行判定并执行打击阻断操作；<br/>
-            3. 风险分析：分维度特征可视化展示业务风险场景分布情况，以便于制定和完善规则策略；<br/>
-            4. 数据可视化：借助一些支撑平台，创建门户，进行相关业务的看板报表开发及推送管理；<br/>
-            5. 业务运营：以小助手的身份，协助用户接入，并解答使用过程中的各类问题；经过沉淀形成FAQ，以供用户使用。
-    open: open
+    - type: Projects
+      name: 项目经验
+      content:
+          - title: 领域模型构建
+            sub: AI训练师&AI开发者
+            duration: 2024年5月 - 至今
+            tags:
+                - 数据清洗
+                - 模型训练
+                - 模型部署
+                - 模型评估
+            summary: 项目描述：<br/> 1. 基于公司内引入的基础模型（Qwen系列），构建领域类模型。
+            detail:
+                主要职责：<br/> 1. 数据构造：对业务方提供的数据，进行清洗加工，整理成模型需要的格式；<br/>
+                2. 模型选型：对司内机器学习平台提供的中文对话模型，进行评估，筛选出适用于自己业务场景的模型；<br/>
+                3. 模型微调：借助Prompt和LoRA微调技术，优化模型效果；<br/>
+                4. 优化迭代：借助Python接口调用对模型结果进行验证并迭代，直到准确率到90%以上。
+            open: open
 
-  - title: 模拟器开发及版本管理
-    sub: Python开发
-    duration: 2017年2月 - 2019年1月
-    tags:
-    - Python网络编程
-    - 通信协议
-    - Flask
-    summary: 项目描述：<br/> 1. 模拟器开发：模拟基站与网管之间的交互；<br/> 2. 版本管理：模拟器版本的web界面管理，远程维护，以及对外租赁。
-    detail: 主要职责：<br/> 1. 模块开发：负责对网管产品U2000下发的请求做出正确的响应，同样支持模拟器对U2000主动发送原语（如：告警）；<br/>
-            2. 需求设计：负责模拟器版本管理web网站的设计；<br/>
-            3. 全栈开发：独立完成版本管理平台的全栈开发。
-    open: open
-   #可继续添加更多内容
+          - title: 文档Agent信息提取技能构建
+            sub: AI应用开发
+            duration: 2025年2月 - 至今
+            tags:
+                - 文档Agent
+                - VL
+                - Embedding
+                - Faiss检索
+                - 多模态模型
+                - 异步API
+            summary: 项目描述：<br/> 1. 商业化标签抽取：使用大模型相关技术，从众多产品的二方数据中，挖掘商业化标签（商品类别、SPU）；<br/> 2. 智能化数据分析引擎：用AI开启对话式数据分析，从而提高数据资产的使用效率，降低数据分析的门槛。
+            detail:
+                主要职责：<br/> 1. 文档解析：对用户投递的文档，进行解析，得到一份json文件，含源文档各个模块的文本信息、图片信息、版面信息（含页眉页脚、手写签名区域等）；<br/>
+                2. 检索模块：对长文本进行智能切块、每块文本和所有图片分别提取特征向量，再基于向量进行检索；筛选出和提取信息最相关的文本和图片；<br/>
+                3. 大模型总结：借助VL模型，使用固定格式的Prompt，借助多模态模型进行总结，输出json结构或markdown结构的文本；后处理成固定格式返回给用户；<br/>
+                4. 工程化落地：借助 Uvicorn+FastAPI+HTTPX 全联路异步机制，构建微服务，提供异步API。
+            open: open
+
+          - title: 大模型场景落地
+            sub: 数据挖掘
+            duration: 2023年3月 - 2024年3月
+            tags:
+                - 数据加工
+                - Prompt设计
+                - 模型微调
+                - 模型评测
+            summary: 项目描述：<br/> 1. 商业化标签抽取：使用大模型相关技术，从众多产品的二方数据中，挖掘商业化标签（商品类别、SPU）；<br/> 2. 智能化数据分析引擎：用AI开启对话式数据分析，从而提高数据资产的使用效率，降低数据分析的门槛。
+            detail:
+                主要职责：<br/> 1. 数据构造：对业务方提供的数据，进行清洗加工，整理成模型需要的格式；<br/>
+                2. 模型选型：对司内机器学习平台提供的中文对话模型，进行评估，筛选出适用于自己业务场景的模型；<br/>
+                3. 模型微调：借助Prompt和LoRA微调技术，优化模型效果；<br/>
+                4. 优化迭代：借助Python接口调用对模型结果进行验证并迭代，直到准确率到90%以上。
+            open: open
+
+          - title: 星迹-业务安全风控平台
+            sub: 运营开发&数据挖掘
+            duration: 2019年3月 - 2023年2月
+            tags:
+                - Python
+                - SQL
+                - 数据可视化
+                - 数据分析
+                - 安全策略
+            summary: 项目描述：<br/> 一站式安全运营平台，为业务各种场景（账户安全、营销活动、内容生态安全、反赌反诈等）提供安全解决方案。年度减损9000万以上。<br/> 1. 提供业务接入，可视化策略编排，策略版本控制，实现全链路的监控和运营数据管理。<br/> 2. 在平台的使用过程中，积累了大量风控专用的特征数据，结合“终端特征、图模型、行为时序、多模态”等技术，形成了完备的风险防控闭环。
+            detail:
+                主要职责：<br/> 1. 后台开发：负责接入层的开发，即接收业务在关键路径上的请求，对于有风险的操作，执行策略判定，并将结果返回给策略引擎，用于策略的执行和判定，以及后续的打击阻断操作；<br/>
+                2. 策略对抗：对业务配置的策略按逻辑进行判定并执行打击阻断操作；<br/>
+                3. 风险分析：分维度特征可视化展示业务风险场景分布情况，以便于制定和完善规则策略；<br/>
+                4. 数据可视化：借助一些支撑平台，创建门户，进行相关业务的看板报表开发及推送管理；<br/>
+                5. 业务运营：以小助手的身份，协助用户接入，并解答使用过程中的各类问题；经过沉淀形成FAQ，以供用户使用。
+            open: open
+
+          - title: 模拟器开发及版本管理
+            sub: Python开发
+            duration: 2017年2月 - 2019年1月
+            tags:
+                - Python网络编程
+                - 通信协议
+                - Flask
+            summary: 项目描述：<br/> 1. 模拟器开发：模拟基站与网管之间的交互；<br/> 2. 版本管理：模拟器版本的web界面管理，远程维护，以及对外租赁。
+            detail:
+                主要职责：<br/> 1. 模块开发：负责对网管产品U2000下发的请求做出正确的响应，同样支持模拟器对U2000主动发送原语（如：告警）；<br/>
+                2. 需求设计：负责模拟器版本管理web网站的设计；<br/>
+                3. 全栈开发：独立完成版本管理平台的全栈开发。
+            open: open
+            #可继续添加更多内容
 
 #others 其他简略内容(列表)
 others: #其他列表显示
-- type: others #ID可以为空
-  name: 其他
-  content: #选择需要的格式
-  -
-  - title: 奖项
-    text: 腾讯微创新奖｜腾讯出行服务：抗疫公益互助
-  - title: 证书
-    text: PMP｜项目管理证书
-  #   items: #单行列表
-  #   - 睡觉
-  #   - 吃饭
-  #   - coding
-  # - title: 列表
-  #   list:
-  #   - 第一项
-  #   - 第二项
+    - type: others #ID可以为空
+      name: 其他
+      content: #选择需要的格式
+          -
+          - title: 奖项
+            text: 腾讯微创新奖｜腾讯出行服务：抗疫公益互助
+          - title: 证书
+            text: PMP｜项目管理证书
+      #   items: #单行列表
+      #   - 睡觉
+      #   - 吃饭
+      #   - coding
+      # - title: 列表
+      #   list:
+      #   - 第一项
+      #   - 第二项
 #- type:
 #  name: '其他'
 #  content: #选择需要的格式
@@ -154,12 +205,12 @@ others: #其他列表显示
 
 #footer 脚注，打印版和web版不同不显示
 footer: #脚注多组
-  print: #打印版markdown或者html
-  screen:
-  - text: 简历脚注
-  #   href: '/'
-  - text: Made with &hearts; by Yafengbu
-    href: https://kyod-bu.github.io/cv/
+    print: #打印版markdown或者html
+    screen:
+        - text: 简历脚注
+        #   href: '/'
+        - text: Made with &hearts; by Yafengbu
+          href: https://kyod-bu.github.io/cv/
 
 #页面额外js脚本，如xx统计
 scripts:
