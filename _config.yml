@@ -23,9 +23,9 @@ print:
     section:
         margin: "3px auto 0" #边距
         padding: "3px 0" #内部偏移
-        width: "92%" #内容宽度 basic无效
+        width: "88%" #内容宽度 basic无效
     # content每一条边距设置
-    block-margin: 4px 0
+    block-margin: 4px
     #打印版页脚设置
     footer:
         top: 5px #上边距
