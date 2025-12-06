@@ -171,8 +171,7 @@ section {
     &:lang(zh) {
       font-size: 1.65em;
       padding-right: 1%;
-      width: $subject-width * 3 / 4;
-      min-width: 5em;
+      width: $subject-width * 3 / 4;  // min-width: 5em;
     }
   }
 
