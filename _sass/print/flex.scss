@@ -1,4 +1,4 @@
-/*
+/* 
 左右密集打印样式
 chrome 优先
 */
@@ -87,12 +87,12 @@ chrome 优先
   }
 
   .tag {
-    margin-right: .5em; // border-bottom: 1px dashed;
+    margin-right: .5em; // border-bottom: 1px dashed;   
     code {
       color: #333;
 
       &:not(:last-child)::after {
-        content: '';
+        content: ',';
         font-size: 50%;
       }
     }

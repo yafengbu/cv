@@ -1,6 +1,6 @@
----
+--- 
 layout: default
----
+--- 
 {% assign data = site.data[ page.data] | default: site.data['resume'] %}
 {% if site.querytime %}
   {% assign querytime = site.time | date: '%s' | prepend: '?' %}
@@ -55,11 +55,11 @@ layout: default
         <div class="contact-item">
           {% if item.icon.size > 0 %}
           <i class="icon" aria-hidden="true">{% include {{item.icon}} %}</i>
-          {% endif %}
+          {% endif %} 
           {% if item.href.size > 0 %}
           <a href="{{item.href }}" {{ item.attr }}>{{ item.text }}</a>
           {% else %}
-          <span>{{ item.text }}</span>
+          <span>{{ item.text }}</span> 
           {% endif %}
         </div>
         {% endfor %}
@@ -80,12 +80,9 @@ layout: default
                 <h3 class="title"><a href="{{content.url}}" target="_blank">{{ content.title }}</a></h3>
               {% else %}
                 <h3 class="title">{{ content.title }}</h3>
-              {% endif %}
+              {% endif %} 
               {% if content.sub.size > 0 %}
                 <h4 class="sub">{{ content.sub }}</h4>
-              {% endif %}
-              {% if content.duration.size > 0 %}
-                <h4 class="time">{{ content.duration }}</h4>
               {% endif %}
             </div>
 
@@ -97,9 +94,9 @@ layout: default
                 {% endfor %}
               </div>
               {% endif %}
-              <!-- {% if content.duration.size > 0 %}
+              {% if content.duration.size > 0 %}
                <i class="time">{{ content.duration }}</i>
-              {% endif %} -->
+              {% endif %}
             </div>
 
             {% if content.detail.size > 0 %}
@@ -124,7 +121,7 @@ layout: default
               <p class="items">
                 {% for item in content.items %}
                   <span class="item">{{ item }}</span>
-                {% endfor %}
+                {% endfor %} 
               </p>
             {% elsif content.summary %}
               <p class="summary">{{ content.summary }}</p>
@@ -134,8 +131,8 @@ layout: default
           {% endfor %}
         </div>
       </section>
-      {% endfor %}
-
+      {% endfor %} 
+      
       {% for other in data.others %}
       <section class="other" id="{{ other.type }}">
         <h2 class="subject">{{ other.name | default: other.type }}</h2>
@@ -146,11 +143,11 @@ layout: default
               <h3 class="name">{{ content.title }}</h3>
             {% endif %}
             {% if content.text%}
-              <span class="text">{{ content.text }}</span>
+              <span class="text">{{ content.text }}</span> 
             {% elsif content.items %}
               {% for item in content.items %}
                 <span class="text item">{{ item }}</span>
-              {% endfor %}
+              {% endfor %} 
             {% elsif content.list %}
               <ul class="list">
                 {% for li in content.list %}
@@ -176,9 +173,9 @@ layout: default
           <li><a href="{{footer.href}}">{{ footer.text | default:footer }}</a></li>
         {% else %}
           <li>{{ footer.text | default:footer }}</li>
-        {% endif %}
+        {% endif %} 
       {% endfor %}
-      {% case data.lang %}
+      {% case data.lang %} 
         {% when 'zh' %}
           <li class="pc-only" ><a href="javascript:window.print()">打印 (PDF)</a></li>
           <li>更新 @ {{ page.date | default: site.time | date: '%Y-%m-%d'}}</li>
@@ -189,7 +186,7 @@ layout: default
     </ul>
   </footer>
   {% endif %}
-
+  
   {% if data.footer.print.size > 0 %}
    {% capture md %}{% include_relative {{data.footer.print}} %}{% endcapture %}
   <footer class="print">{{ md | markdownify }}</footer>

@@ -4,7 +4,7 @@
 @page {
   /* auto is the initial value */
   size: auto;
-  margin: $print-page-margin; // this affects the margin in
+  margin: $print-page-margin; // this affects the margin in 
 }
 
 @page:blank {
@@ -32,7 +32,7 @@ body {
 
 header,
 main {
-  width: 98%;
+  width: 90%;
 }
 
 /*链接*/
@@ -108,16 +108,4 @@ summary {
 /*color*/
 .name {
   color: #000;
-}
-
-/*不需要缩进*/
-.detail {
-  text-indent: 0 !important;
-}
-
-/*左边标题垂直方向置顶*/
-section {
-  h2 {
-    vertical-align: top !important;
-  }
 }

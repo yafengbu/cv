@@ -27,7 +27,7 @@ summary {
     &::before {
         font-family: initial;
         // content: '\0a7';
-        content: '';
+        content: '§';
         margin: 0 .5em 0 -.5em;
     }
     &::after {
@@ -54,7 +54,7 @@ summary {
         color: #555;
         list-style: none;
         &::before {
-            content: '';
+            content: '§';
             margin: 0 .5em 0 -.5em;
         }
         &::after {
@@ -75,7 +75,7 @@ details[open] {
         color: #222 !important;
         animation: black .7s;
         &::before{
-            content: '';
+            content: '☰';
             // content: '\02630'
         }
         &::after {
