@@ -4,7 +4,7 @@
 @page {
   /* auto is the initial value */
   size: auto;
-  margin: $print-page-margin; // this affects the margin in 
+  margin: $print-page-margin; // this affects the margin in
 }
 
 @page:blank {
@@ -98,7 +98,7 @@ footer {
 /*summary*/
 summary {
   color: #111 !important;
-  margin: 0 0 0 .8em !important;
+  margin: .3em 0 0 0 !important;
 
   &::after {
     display: none;
