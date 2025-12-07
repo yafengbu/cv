@@ -97,7 +97,7 @@ footer li {
 header {
   @include justify-content(space-around);
   border-bottom: .3em solid #8bf;
-  padding: 2.5em 0 1em;
+  padding: 1.5em 0 1em;
 
   .avatar {
     //头像
@@ -185,17 +185,18 @@ section {
 /*内部小块布局*/
 
 .block {
-  margin: 1em 0;
+  margin: .5em 0;
 
   &:not(:first-child) {
-    padding-top: .5em;
+    padding-top: .1em;
   }
 
   .summary {
     font-size: 1.1em;
-    margin: .3em 0 0 0;
+    margin: .3em 0 0 .5em;
     line-height: 1.5em;
     font-weight: 600;
+    list-style: none;
     list-style-type: none;
     ::before{
       content: '';
@@ -272,7 +273,7 @@ code {
 
   code {
     color: #999;
-    margin-left: .2em;
+    margin-left: .5em;
     background: rgba(249, 249, 252, .5);
     font-size: 1.1em;
     padding: .1em;
