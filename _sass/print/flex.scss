@@ -27,7 +27,7 @@ chrome 优先
   section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: $print-section-margin;
     padding: $print-section-padding;
 
