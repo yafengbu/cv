@@ -1,17 +1,17 @@
 # 数据格式可以为 yaml(文件以.yml结尾) 或者json(文件以.json结尾)
 # 如果YAML格式的数据请先检查格式是否有误，可选检查工具 http://www.yamllint.com
 
-title: 卜亚风-AI应用开发-深圳
+title: 卜亚风-AI应用开发
 lang: zh #语言设置 zh表示中文 en 表示英语
 name: 卜亚风
-jobtitle: AI模型训练 ｜ AI应用开发 #可空不显示
+jobtitle: AI应用开发 #可空不显示
 photo: assets/img/me.jpg #照片可空，不显示
 
 #联系方式
 contact: #联系方式连接等3~5行
     # - text: yafengbu@gmail.com #文本内容，另一个邮箱 751019439@qq.com
     - text: 751019439@qq.com
-      # href: mailto:yafengbu@gmail.com #链接，无链接则空
+      href: mailto:751019439@qq.com #链接，无链接则空
       icon: icons/email.svg #图标 svg文件
     - text: +86 15029074256
       icon: icons/phone.svg
@@ -38,9 +38,11 @@ main: #简历主要内容，
             tags:
                 - SQL
                 - Python
+                - FastAPI
+                - RAG
                 - 数据分析
                 - 可视化
-                - 大模型
+                - 大模型应用
                 - 模型评估
             # summary: Python开发、数据挖掘、大模型
             detail:
@@ -61,7 +63,7 @@ main: #简历主要内容，
       content:
           - title: 上海科之锐人才咨询有限公司
             sub: AI模型训练&AI应用开发
-            duration: 2024年5月 - 至今
+            duration: 2024年5月 - 2025年12月
             tags:
             # - 数据挖掘
             # - 模型落地
@@ -95,26 +97,28 @@ main: #简历主要内容，
     - type: Projects
       name: 项目经验
       content:
-          - title: 领域模型构建
-            sub: AI模型训练师&AI应用工程师
-            duration: 2024年5月 - 至今
+          - title: 领域模型构建与工程化落地
+            sub: AI应用工程师（训练-部署-评估全链路）
+            duration: 2024年5月 - 2025年12月
             tags:
-                - MLOps
+                - Qwen
                 - 数据清洗pipeline
-                - 模型训练
-                - 模型部署（vLLM）
-                - 模型评估
-            summary: 项目描述：基于公司内引入的基础模型（Qwen系列），构建领域类模型。
+                - LoRA/DPO
+                - vLLM
+                - FastText
+                - MinHash
+                - 评估微服务
+            summary: 项目描述：基于 Qwen 系列基础大模型，构建支持多业务线的企业级领域大模型（含通用公共模型与垂直特性模型），实现从原始业务数据到可调用AI技能的端到端交付，并通过低代码平台赋能非技术用户快速集成。
             detail:
-                主要职责：<br/> 1. 数据清洗pipeline：定时拉取业务数据，清洗-Fasttext知识密度打分-模型质检过滤-Minhash全局去重；<br/>
-                2. 模型训练：基于公司引入的基础模型，进行微调（SFT、LoRA、DPO），构建懂华为的企业公共大模型和特性模型；<br/>
-                3. 模型部署：借助 vLLM 部署推理服务，之后借助低代码平台封装各种技能，提供给用户使用；<br/>
-                4. 模型评估：接收自定义数据集，计算Rouge、Bleu指标和自定义指标；另外也支持预置通用数据集，计算通用指标。
+                主要职责：<br/> 1. 构建高质量数据 pipeline：定时拉取TB级业务数据，通用规则清洗->FastText知识密度打分->模型辅助质检过滤->Minhash全局去重，日均处理数据量超50万条，有效提升训练数据构造效率，并保障pipeline稳定运行（SLA>99%）；<br/>
+                2. 模型微调与对齐：采用 LoRA 微调技术，结合 DPO 对齐人类偏好，在保持模型通用能力的同时显著提升领域术语理解准确率；<br/>
+                3. 高性能推理服务部署：基于 vLLM 部署推理服务，将模型能力封装为标准化 API，并集成至公司低代码平台，支持业务方通过拖拽方式快速构建智能问答、文档摘要等 AI 技能，已上线 10+ 内部应用场景；<br/>
+                4. 建立多维评估体系：支持自定义数据集上传，自动计算 Perplexity、ROUGE、BLEU 及业务相关指标（如术语覆盖率、合规性得分），评估结果自动同步至数据管理平台；同时集成通用 benchmark 用于横向对比，驱动模型选型与迭代决策。
             open: open
 
           - title: 文档Agent信息提取技能构建
             sub: AI应用工程师
-            duration: 2025年2月 - 至今
+            duration: 2025年2月 - 2025年12月
             tags:
                 - Agent
                 - RAG
@@ -133,7 +137,7 @@ main: #简历主要内容，
 
           # - title: Chat(智能问答)
           #   sub: AI应用工程师
-          #   duration: 2025年4月 - 至今
+          #   duration: 2025年4月 - 2025年8月
           #   tags:
           #       - RAG
           #       - Prompt设计
