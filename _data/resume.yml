@@ -66,6 +66,15 @@ main: #简历主要内容，
     - type: experience
       name: 工作经历
       content:
+          - title: 腾讯子公司（腾讯TEG-AI Data部/基础数据多模态团队）
+            sub: 数据工程（大模型方向）
+            duration: 2026年2月 - 至今
+            tags:
+            # - 数据挖掘
+            # - 模型落地
+            # summary: 职务或者工作总结(自动折叠)
+            detail: 负责混元多模态数据 xxx
+
           - title: 上海科之锐人才咨询有限公司（华为OD）
             sub: AI应用开发
             duration: 2024年5月 - 2025年12月
