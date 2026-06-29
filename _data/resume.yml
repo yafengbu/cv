@@ -44,6 +44,12 @@ main: #简历主要内容，
                 - Langfuse
                 - LoRA
                 - Faiss
+                - FFmpeg
+                - Ray
+                - PySpark
+                - Iceberg
+                - Pulsar
+                - 云存储
             # summary: Python开发、数据挖掘、大模型
             detail:
                 1. 熟练掌握 Python，深入理解异步编程（async/await、asyncio、HTTPX），熟悉常用数据结构与算法；<br/>
@@ -53,7 +59,8 @@ main: #简历主要内容，
                 5. 有 VL/VLM 多模态模型（如 Qwen-VL）调用与结构化输出（JSON Schema）实践经验；<br/>
                 6. 熟练使用 FastAPI 构建高性能异步微服务，熟悉 RESTful API 设计、任务异步提交/轮询模式，具备 Docker 容器化部署经验；<br/>
                 7. 熟悉集成 Langfuse 实现 LLM 应用全链路 trace 级观测，支持 Prompt 版本管理等；<br/>
-                8. 熟悉 Linux 环境及 TCP/IP、HTTP 等网络协议。
+                8. 熟练掌握 PySpark 和 Ray 分布式计算框架；<br/>
+                9. 熟悉 Linux 环境及 TCP/IP、HTTP 等网络协议。
             open: open
           - title: 工程素养
             detail:
@@ -66,14 +73,14 @@ main: #简历主要内容，
     - type: experience
       name: 工作经历
       content:
-          - title: 腾讯子公司（腾讯TEG-AI Data部/基础数据多模态团队）
+          - title: 腾讯瑞德铭科技发展有限公司深圳分公司（子公司组织/腾讯TEG-AI Data部）
             sub: 数据工程（大模型方向）
-            duration: 2026年2月 - 至今
+            duration: 2026年2月 - 2026年6月
             tags:
             # - 数据挖掘
             # - 模型落地
             # summary: 职务或者工作总结(自动折叠)
-            detail: 负责混元多模态数据 xxx
+            detail: 负责混元3D世界模型-UE资产管线构建；<br/> 参与多模态数据处理（视频、音频、图像、3D、文本等）的分布式批处理管线框架建设。
 
           - title: 上海科之锐人才咨询有限公司（华为OD）
             sub: AI应用开发
@@ -111,23 +118,60 @@ main: #简历主要内容，
     - type: Projects
       name: 项目经验
       content:
+          - title: 混元数据管线框架（HPF）
+            sub: 工程开发
+            duration: 2026年2月 - 2026年6月
+            tags:
+                - Ray (Ray Data / Ray Actor)
+                - PySpark
+                - Iceberg
+                - Pulsar
+                - 腾讯云 COS
+                - Cursor AI Agent
+            summary: 项目描述：HPF 是一个面向多模态大模型（混元大模型）训练数据处理的底层核心管线框架。该框架基于 Ray Data 构建了分布式的批处理流水线，旨在为视频、音频、图像、3D及文本等海量多模态数据提供清洗、打标、编码、去重等全链路的数据处理能力。
+            detail:
+                主要职责：<br/> 1. 分布式多模态管线引擎与异构调度：基于 Ray Data 设计并实现了支持 DAG 拓扑的批处理引擎，采用 YAML 配置驱动模式，支持 repartition 及 CPU/GPU 异构资源调度（Placement）。实现了 Local、Ray Data、Ray Actor 多种执行后端的无缝切换，大幅提升了多模态数据处理流水线的灵活性与资源利用率；<br/>
+                2. 大模型推理算子与模块化体系建设：构建了涵盖视频、图像、音频、文本、3D 五大模态的标准化算子库，实现 @operator_register 一键注册，自动发现机制。重点集成 RayDataVLLMOp 大模型批推理算子，利用 vLLM 加速技术显著提升了海量文本数据的处理与打标吞吐量，有效支撑了大模型训练语料的高效生产；<br/>
+                3. 生产级数据契约与高可用保障体系：设计了严格的算子 I/O Schema 契约机制，在构建时进行管线兼容性阻断校验，在运行时执行首批次列名校验，极大降低了分布式任务的运行时错误率。内置 14 种 Expectation 数据校验规则与 QualityCheckpoint 机制，并打通七彩石（Rainbow）配置中心实现 Batch 级别参数热更新，确保了数据产出的高质量与系统的高可用；<br/>
+                4. 平台化API工具链与AI原生研发提效：开发 hy_data_pipeline.api 结构化 JSON API 与 hy-pipeline 命令行工具，提供算子目录查询、PaaS 资源需求推导等能力，无缝对接上层数据平台。深度集成 Cursor AI Agent，沉淀了涵盖算子脚手架生成、配置校验、CI/CD 自动化发版等数十个 Cursor Skills，打造了AI原生的高效开发工作流，显著提升了团队的研发迭代效率。
+            open: open
+
+          - title:  混元3D世界模型-UE场景资产数据管线构建
+            sub: AI数据工程师
+            duration: 2026年2月 - 2026年6月
+            tags:
+              - PySpark
+              - Ray Data
+              - FFmpeg
+              - Qwen-VL
+              - Iceberg
+              - Pulsar
+              - MongoDB
+            summary: 项目描述：为支撑混元3D世界模型的高质量训练，主导构建了从UE场景采集到多模态数据交付的端到端自动化数据管线。项目涵盖场景资产拉取、轨迹视频合成、自动化质检及i2v/t2v多模态Caption打标等核心模块，解决了海量3D非结构化数据在处理效率与质量管控上的工程瓶颈。
+            detail:
+              主要职责：<br/> 1. 分布式场景资产ETL与存储优化：基于PySpark构建高可用定时ETL任务，实现采买场景资产的周期性自动拉取与去重；设计分层存储策略，将清洗后的资产无缝流转至腾讯云COS与Iceberg，确保了上游数据供给的时效性与完整性；<br/>
+              2. 3D轨迹视频&点云视频并行合成：针对UE渲染产出的图片、深度EXR及相机参数JSON等多源异构数据，基于Ray Data开发分布式并行处理框架。通过优化FFmpeg合成逻辑与内存管理，大幅提升了轨迹视频与点云视频的合成吞吐量，有效支撑了大规模场景数据的快速迭代；<br/>
+              3. 自动化质检与数据闭环体系：设计“随机抽样+关键帧提取（中间帧/最佳帧）”的自动化质检机制，对20%的核心轨迹数据进行多维度校验。建立不合格数据自动回流修复机制，打通了从渲染到质检的反馈闭环，显著降低了下游模型训练中的噪声数据比例；<br/>
+              4. 多模态数据智能打标（AI应用落地）：搭建基于Qwen-VL的视频理解自动化打标流水线，对合成视频进行i2v/t2v Caption生成。通过Prompt工程优化与批量推理加速，实现了海量3D视频数据的高质量语义对齐，为3D世界模型的跨模态训练提供了核心语料支撑。
+            open: open
+
           - title: 领域模型构建与工程化落地
             sub: AI应用开发（训练-部署-评估全链路）
             duration: 2024年5月 - 2025年12月
             tags:
-                - Qwen
-                - 数据清洗pipeline
-                - LoRA/DPO
-                - vLLM
-                - FastText
-                - MinHash
-                - 评估微服务
+              - Qwen
+              - 数据清洗pipeline
+              - LoRA/DPO
+              - vLLM
+              - FastText
+              - MinHash
+              - 评估微服务
             summary: 项目描述：基于 Qwen 系列基础大模型，构建支持多业务线的企业级领域大模型（含通用公共模型与垂直特性模型），实现从原始业务数据到可调用AI技能的端到端交付，并通过低代码平台赋能非技术用户快速集成。
             detail:
-                主要职责：<br/> 1. 数据工程：设计自动化数据清洗 pipeline，定时拉取TB级业务数据->通用规则清洗->FastText知识密度打分->模型辅助质检过滤->Minhash全局去重，日均处理数据量超50万条，有效提升训练数据构造效率，并保障pipeline稳定运行（SLA>99%）；<br/>
-                2. 高效微调：采用 LoRA 微调技术，结合 DPO 对齐人类偏好，在保持模型通用能力的同时显著提升领域术语理解准确率；<br/>
-                3. 高性能部署：基于 vLLM 部署推理服务，将模型能力封装为标准化 API，并集成至公司低代码平台，支持业务方通过拖拽方式快速构建智能问答、文档摘要等 AI 技能，已上线 10+ 内部应用场景；<br/>
-                4. 评估体系：支持自定义数据集上传，自动计算 Perplexity、ROUGE、BLEU 及业务相关指标（如术语覆盖率、合规性得分），评估结果自动同步至数据管理平台；同时集成通用 benchmark 用于横向对比，驱动模型选型与迭代决策。
+              主要职责：<br/> 1. 数据工程：设计自动化数据清洗 pipeline，定时拉取TB级业务数据->通用规则清洗->FastText知识密度打分->模型辅助质检过滤->Minhash全局去重，日均处理数据量超50万条，有效提升训练数据构造效率，并保障pipeline稳定运行（SLA>99%）；<br/>
+              2. 高效微调：采用 LoRA 微调技术，结合 DPO 对齐人类偏好，在保持模型通用能力的同时显著提升领域术语理解准确率；<br/>
+              3. 高性能部署：基于 vLLM 部署推理服务，将模型能力封装为标准化 API，并集成至公司低代码平台，支持业务方通过拖拽方式快速构建智能问答、文档摘要等 AI 技能，已上线 10+ 内部应用场景；<br/>
+              4. 评估体系：支持自定义数据集上传，自动计算 Perplexity、ROUGE、BLEU 及业务相关指标（如术语覆盖率、合规性得分），评估结果自动同步至数据管理平台；同时集成通用 benchmark 用于横向对比，驱动模型选型与迭代决策。
             open: open
 
           - title: 多模态Agent-文档信息提取
