@@ -15,6 +15,8 @@ contact: #联系方式连接等3~5行
       icon: icons/email.svg #图标 svg文件
     - text: +86 15029074256
       icon: icons/phone.svg
+    - text: 深圳 ｜ 西安
+      icon: icons/location.svg
 # - text: https://github.com/yafengbu/
 #   icon: icons/github.svg
 #   href: https://github.com/yafengbu/
@@ -73,8 +75,8 @@ main: #简历主要内容，
     - type: experience
       name: 工作经历
       content:
-          - title: 腾讯瑞德铭科技发展有限公司深圳分公司（子公司组织/腾讯TEG-AI Data部）
-            sub: 数据工程（大模型方向）
+          - title: 腾讯瑞德铭科技发展有限公司（子公司组织/腾讯TEG-AI Data部）
+            sub: AI数据工程
             duration: 2026年2月 - 2026年6月
             tags:
             # - 数据挖掘
@@ -122,18 +124,18 @@ main: #简历主要内容，
             sub: 工程开发
             duration: 2026年2月 - 2026年6月
             tags:
-                - Ray (Ray Data / Ray Actor)
+                - Ray
                 - PySpark
                 - Iceberg
                 - Pulsar
                 - 腾讯云 COS
                 - Cursor AI Agent
-            summary: 项目描述：HPF 是一个面向多模态大模型（混元大模型）训练数据处理的底层核心管线框架。该框架基于 Ray Data 构建了分布式的批处理流水线，旨在为视频、音频、图像、3D及文本等海量多模态数据提供清洗、打标、编码、去重等全链路的数据处理能力。
+            summary: 项目描述：HPF 是一个面向多模态大模型训练数据处理的底层核心管线框架。该框架基于 Ray Data 构建了分布式的批处理流水线，旨在为视频、音频、图像、3D及文本等海量多模态数据提供清洗、打标、编码、去重等全链路的数据处理能力。
             detail:
-                主要职责：<br/> 1. 分布式多模态管线引擎与异构调度：基于 Ray Data 设计并实现了支持 DAG 拓扑的批处理引擎，采用 YAML 配置驱动模式，支持 repartition 及 CPU/GPU 异构资源调度（Placement）。实现了 Local、Ray Data、Ray Actor 多种执行后端的无缝切换，大幅提升了多模态数据处理流水线的灵活性与资源利用率；<br/>
-                2. 大模型推理算子与模块化体系建设：构建了涵盖视频、图像、音频、文本、3D 五大模态的标准化算子库，实现 @operator_register 一键注册，自动发现机制。重点集成 RayDataVLLMOp 大模型批推理算子，利用 vLLM 加速技术显著提升了海量文本数据的处理与打标吞吐量，有效支撑了大模型训练语料的高效生产；<br/>
-                3. 生产级数据契约与高可用保障体系：设计了严格的算子 I/O Schema 契约机制，在构建时进行管线兼容性阻断校验，在运行时执行首批次列名校验，极大降低了分布式任务的运行时错误率。内置 14 种 Expectation 数据校验规则与 QualityCheckpoint 机制，并打通七彩石（Rainbow）配置中心实现 Batch 级别参数热更新，确保了数据产出的高质量与系统的高可用；<br/>
-                4. 平台化API工具链与AI原生研发提效：开发 hy_data_pipeline.api 结构化 JSON API 与 hy-pipeline 命令行工具，提供算子目录查询、PaaS 资源需求推导等能力，无缝对接上层数据平台。深度集成 Cursor AI Agent，沉淀了涵盖算子脚手架生成、配置校验、CI/CD 自动化发版等数十个 Cursor Skills，打造了AI原生的高效开发工作流，显著提升了团队的研发迭代效率。
+                主要职责：<br/> 1. 分布式管线引擎与异构调度：基于Ray Data设计DAG批处理引擎，支持YAML配置驱动及CPU/GPU异构调度。实现Local、Ray Data、Ray Actor多种执行后端无缝切换，大幅提升多模态数据处理流水线的灵活性与资源利用率；<br/>
+                2. 大模型推理算子与模块化体系：构建了涵盖视频、图像、音频、文本、3D五大模态的标准化算子库，实现 @operator_register 一键注册，自动发现机制。重点集成基于vLLM加速的RayDataVLLMOp大模型批推理算子，显著提升海量训练语料的处理与打标吞吐量，高效支撑模型；<br/>
+                3. 生产级数据契约与高可用保障：设计严格的I/O Schema契约机制，在构建与运行时双重校验，大幅降低分布式任务报错率。内置14种Expectation数据校验规则与QualityCheckpoint机制，并打通配置中心实现Batch级参数热更新，全方位保障数据产出质量与系统高可用；<br/>
+                4. 平台化API工具链与AI原生提效：开发结构化API与CLI命令行工具，无缝对接上层数据平台。深度集成Cursor AI Agent，沉淀数十个开发Skills，实现从脚手架生成到CI/CD自动发版的AI原生工作流，显著提升团队研发效率。
             open: open
 
           - title:  混元3D世界模型-UE场景资产数据管线构建
@@ -141,7 +143,7 @@ main: #简历主要内容，
             duration: 2026年2月 - 2026年6月
             tags:
               - PySpark
-              - Ray Data
+              - Ray
               - FFmpeg
               - Qwen-VL
               - Iceberg
